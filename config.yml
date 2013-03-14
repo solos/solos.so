@@ -1,0 +1,7 @@
+---
+active_modules: [pygments, tags, blog, latex]
+author: solos
+canonical_url: http://solos.so
+modules:
+  pygments:
+    style: tango
