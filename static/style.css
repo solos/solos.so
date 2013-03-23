@@ -4,8 +4,8 @@
 
 /* general style */
 body    { font: 17px/25px arial, sans-serif;
-          margin: 0; padding: 0; font-weight: 300; background-color: #FFFEF0;}
-a       { color: #black; font-weight: 400; }
+          margin: 0; padding: 0; font-weight: 300; background-color: #F6F6EF;}
+a       { color: #000000; font-weight: 400; }
 
 /* a:hover { color: #CC0033; } */
 
@@ -74,6 +74,7 @@ div.entry-overview div.summary,
 div.entry-overview div.date,
 div.entry-overview div.summary p    { margin: 0; padding: 0; }
 div.entry-overview div.detail       { margin: 0; }
+div.entry-overview div.detail a     { color: #000000; }
 div.entry-overview div.date         { width: 120px; color: #999; 
                                       font-size: 14px; }
 div.entry-overview h1               { font-weight: normal; }
