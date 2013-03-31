@@ -1,6 +1,6 @@
 public: yes
 tags: [Dropbox, ubuntu]
-summary: Dropbox真心好用
+summary: 
 
 使用Dropbox同步Linux配置文件
 ======================================

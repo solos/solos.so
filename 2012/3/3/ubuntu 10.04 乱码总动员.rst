@@ -1,6 +1,6 @@
 public: yes
 tags: [ubuntu, 乱码]
-summary: xx总动员，标题党。。。
+summary: 
 
 ubuntu 10.04 乱码总动员
 ==============================

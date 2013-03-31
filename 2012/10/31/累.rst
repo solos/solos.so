@@ -1,6 +1,6 @@
 public: yes
 tags: [随想, 感悟]
-summary: 心好累，感觉不会再爱了。。。
+summary: 
 
 累
 ==

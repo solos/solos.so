@@ -1,6 +1,6 @@
 public: yes
 tags: [pip, python, uwsgi]
-summary: 这个没有技术含量，还是编译装逼
+summary: 
 
 用Python pip安装uWsgi
 ==========================

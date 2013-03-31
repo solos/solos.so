@@ -1,6 +1,6 @@
 public: yes
 tags: [随想, 感悟]
-summary: 过去的2012我做了些什么
+summary: 
 
 2012年终总结    
 ============

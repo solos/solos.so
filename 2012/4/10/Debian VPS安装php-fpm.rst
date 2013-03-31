@@ -1,6 +1,6 @@
 public: yes
 tags: [Debian, VPS, php-fpm]
-summary: Linux，你的别名叫折腾
+summary: 
 
 Debian VPS安装php-fpm
 =====================

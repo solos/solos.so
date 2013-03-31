@@ -1,6 +1,6 @@
 public: yes
 tags: [python, pylons, sqlalchemy]
-summary: sqlalchemy orm omg
+summary: 
 
 使用sqlalchemy遇到的一个问题
 =======================================

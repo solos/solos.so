@@ -1,6 +1,6 @@
 public: yes
 tags: [evernote, android, 印象笔记, 离线笔记]
-summary: 屌丝的印象笔记
+summary: 
 
 程序员屌丝应该如何使用印象笔记android版
 =========================================================

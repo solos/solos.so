@@ -1,6 +1,6 @@
 public: yes
 tags: [ubuntu, iso镜像源]
-summary: 离线的时候用DVD iso镜像源安装软件挺方便，就是软件不全
+summary: 
 
 Ubuntu 10.04 通过DVD iso镜像源安装软件
 =====================================================

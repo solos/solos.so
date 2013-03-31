@@ -1,6 +1,6 @@
 public: yes
 tags: [C语言, Dennis Ritchie, Unix]
-summary: C语言和UNIX的发明者之一丹尼斯里奇去世
+summary: 
 
 Hello, world!
 =============

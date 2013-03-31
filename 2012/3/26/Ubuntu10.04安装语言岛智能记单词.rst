@@ -1,6 +1,6 @@
 public: yes
 tags: [ubuntu, 背单词, 语言岛]
-summary: 汗，写了篇两行字的博客
+summary: 
 
 Ubuntu10.04安装语言岛智能记单词
 ===============================

@@ -1,6 +1,6 @@
 public: yes
 tags: [ubuntu, 优酷, 奇艺, 去广告]
-summary: 去广告...
+summary: 
 
 Ubuntu 去优酷、奇艺广告
 =================================

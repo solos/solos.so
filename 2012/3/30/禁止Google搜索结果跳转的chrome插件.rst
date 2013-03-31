@@ -1,6 +1,6 @@
 public: yes
 tags: [Google, 搜索助手]
-summary: 禁止Google搜索结果跳转
+summary: 
 
 禁止Google搜索结果跳转的chrome插件
 ===================================

@@ -1,6 +1,6 @@
 public: yes
 tags: [ubuntu, linux, 阿里旺旺]
-summary: debian下不能用ppa源么？能么？不能么？能！
+summary: 
 
 ubuntu 10.04 安装阿里旺旺
 =================================

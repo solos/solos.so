@@ -1,6 +1,6 @@
 public: yes
 tags: [unix, linux]
-summary: 不懂unix的人注定要发明一个蹩脚的unix。
+summary: 
 
 Unix高手的10个习惯
 ==========================

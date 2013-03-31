@@ -1,6 +1,6 @@
 public: yes
 tags: [阿桑, 一直很安静]
-summary: 给你的爱一直很安静 来交换你偶尔给的关心
+summary: 
 
 怀念阿桑
 ========

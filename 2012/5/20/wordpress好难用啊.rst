@@ -1,6 +1,6 @@
 public: yes
 tags: [wordpress]
-summary: wordpress好难用有木有
+summary: 
 
 wordpress好难用啊
 =================

@@ -1,6 +1,6 @@
 public: yes
 tags: [ubuntu, mysql, 编码]
-summary: UTF8, UTF8, UTF8, UTF8,
+summary: 
 
 Ubuntu下修改Mysql默认编码
 =========================

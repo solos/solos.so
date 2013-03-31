@@ -1,6 +1,6 @@
 public: yes
 tags: [Linux, ssh, 出国]
-summary: just for freedom.
+summary: 
 
 Linux VPS SSH出国
 =====================
