@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset=utf-8>
+  {% block htmlhead %}
+    <title>{% block title %}Home{% endblock %} | solos的网络日志</title>
+    <link rel="openid.server" href="http://www.myopenid.com/server">
+    <link rel="openid.delegate" href="http://solos.myopenid.com/">
+    <link rel="stylesheet" href="/static/reset.css" type="text/css">
+    <link rel="stylesheet" href="/static/style.css" type="text/css">
+    <link href="/feed.atom" rel="alternate" title="Recent Blog Posts" type="application/atom+xml">
+    {%- for link in links %}
+    <link rel="{{ link.rel }}" href="{{ link.href }}"{%
+      if link.media %} media="{{ link.media }}"{% endif %} type="{{ link.type }}">
+    {%- endfor %}
+  {% endblock %}
+  </head>
+  <body>
+    <div class=container>
+      <div class=header>
+        <h1><a href="/">solos的网络日志</a></h1>
+      </div>
+      <div class=navigation>
+        <ul>
+          <li><a href="/">blog</a>
+          <li><a href="/archive/">archive</a>
+          <li><a href="/tags/">tags</a>
+          <li><a href="/projects/">projects</a>
+          <li><a href="/lastfm/">last.fm</a>
+          <li><a href="/fanfou/">饭否</a>
+          <li><a href="/about/">关于我</a>
+        </ul>
+      </div>
+      <div class=body>
+      {% block body %}{% endblock %}
+      </div>
+
+      <div class=footer>
+        <p>&copy; Copyright {{ format_date(format='YYYY') }} by <a href="/about/">solos</a></p>
+          Contact me via <a href="mailto:solos@solos.so">mail</a>,
+          <a href="http://twitter.com/jht360">twitter</a>,
+          <a href="http://github.com/solos">github</a> or
+          <a href="http://bitbucket.org/solos">bitbucket</a>.
+        (<a href="/feed.atom" rel="alternate" title="Recent Blog Posts">feed</a>)
+      </div>
+    </div>
+
+    {% block comment %}{% endblock %}
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-39027663-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+  </body>
+</html>
