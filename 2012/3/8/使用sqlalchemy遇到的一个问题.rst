@@ -7,7 +7,7 @@ summary:
 
 在使用Python WEB框架Pylons 0.9.7自带的sqlalchemy 0.5.8 创建表的时候遇到一个问题，就是如何创建MySQL的包含枚举类型的列。 经过查资料和问别人，弄明白了，分享下写法。另附上sqlalchemy 0.5 support for mysql文档的地址：`http://docs.sqlalchemy.org/en/rel_0_5/reference/dialects/mysql.html <http://docs.sqlalchemy.org/en/rel_0_5/reference/dialects/mysql.html>`_
 
-.. code:: python
+.. code-block:: python
 
     import sqlalchemy as sa
     from sqlalchemy import orm
