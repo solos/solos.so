@@ -50,7 +50,7 @@ function processLast(feed){
     console.log(tracks);
     var str='';
     for (var i=0;i<10;i++){
-        str += '<li><a href="http://geci.me/artist/' + tracks[i].artist.content + '">' + tracks[i].artist.content + '</a> - <a href="http://geci.me/search/song/' + tracks[i].name + '">' + tracks[i].name + '</a>';
+        str += '<li><a href="http://gecimi.com/artist/' + tracks[i].artist.content + '">' + tracks[i].artist.content + '</a> - <a href="http://gecimi.com/search/song/' + tracks[i].name + '">' + tracks[i].name + '</a>';
         if(tracks[i].nowplaying) str+=' 现在在听 <img src="/static/np.gif" alt="">';
         else{
             str += ' ' + relative_time(new Date(tracks[i].date.content));

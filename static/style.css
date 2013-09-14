@@ -17,19 +17,19 @@ h1 a, h2 a, h3 a, h4 a,
 h5 a, h6 a                  { text-decoration: none; }
 h1 a:hover, h2 a:hover,
 h3 a:hover, h4 a:hover      { text-decoration: underline; }
-h1.title                    { font-size: 24px; text-decoration: none;}
-h1, h2                      { margin: 10px 0 25px 0; }
-h1                          { font-size: 24px; }
-h2                          { font-size: 21px; }
+h1.title                    { font-size: 1.5em; text-decoration: none;}
+h1, h2                      { margin: 0.8em 0 1.2em 0; }
+h1                          { font-size: 1.5em; }
+h2                          { font-size: 1.2em; }
 
 /* layout elements */
-div.container               { width: 75%; margin: 48px auto; padding: 0; }
-div.header                  { display: block; margin-bottom: 36px;}
-div.header h1               { font-size: 35px;}
+div.container               { width: 55%; margin: 2em auto; padding: 0; }
+div.header                  { display: block; margin-bottom: 2em; margin-top: 4em;}
+div.header h1               { font-size: 2em; }
 div.navigation              { display: block; }
-div.navigation              { height: 25px; margin-bottom: 42px; }
+div.navigation              { margin-bottom: 2em; font-size: 1.2em;}
 div.navigation ul           { margin: 0; padding: 0; list-style: none; }
-div.navigation ul li        { border-bottom: 2px solid #ccc; border-top: 2px solid #ccc; display: inline; margin: 4px; padding: 4px 8px 4px 8px; }
+div.navigation ul li        { border-bottom: 1px solid #ccc; display: inline; margin: 0.3em; padding: 0.3em; }
 div.navigation ul li a       { text-decoration: none;}
 div.body                    { clear: both; }
 div.footer                  { border-top: 1px solid #555; padding-top: 9px;
@@ -58,40 +58,40 @@ table           { border: 1px solid #ddd; border-collapse: collapse;
 td, th          { padding: 2px 12px; border: 1px solid #ddd; }
 
 /* footnotes */
-table.footnote          { margin: 15px 0; background: transparent; border: none; }
-table.footnote td       { border: none; padding: 9px 0 0 0; font-size: 15px; }
-table.footnote td.label { padding-right: 10px; }
+table.footnote          { margin: 1em 0; background: transparent; border: none; }
+table.footnote td       { border: none; padding: 0.5em 0 0 0; font-size: 1em; }
+table.footnote td.label { padding-right: 0.8em; }
 table.footnote td p     { margin: 0; }
-table.footnote td p + p { margin-top: 15px; }
+table.footnote td p + p { margin-top: 1em; }
 
 /* blog overview */
-div.entry-overview                  { margin: 15px 0px 15px 0px; }
+div.entry-overview                  { margin: 1em 0px 1em 0px; }
 div.entry-overview h1,
 div.entry-overview div.summary,
-div.entry-overview div.summary p    { line-height: 30px; }
-div.entry-overview h1               { margin: 0; font-size: 20px; }
+div.entry-overview div.summary p    { line-height: 1.5em; }
+div.entry-overview h1               { margin: 0; font-size: 1em; }
 div.entry-overview div.summary,
 div.entry-overview div.date,
 div.entry-overview div.summary p    { margin: 0; padding: 0; }
 div.entry-overview div.detail       { margin: 0; }
 div.entry-overview div.detail a     { color: #000000; }
-div.entry-overview div.date         { width: 120px; color: #999; 
-                                      font-size: 14px; }
-div.entry-overview h1               { font-weight: normal; }
+div.entry-overview div.date         { width: 20%; color: #999; 
+                                      font-size: 1em; }
+div.entry-overview h1               { font-weight: normal;}
 /* div.entry-overview h1:after         { content: " —"; } */
 
 /* other alignment things */
-img.align-center        { margin: 15px auto; display: block; }
+img.align-center        { margin: 1em auto; display: block; }
 
 /* pagination */
-div.pagination          { margin: 36px 0 0 0; text-align: center; }
+div.pagination          { margin: 2em 0 0 0; text-align: center; }
 div.pagination strong   { font-weight: normal; font-style: italic; }
 
 /* tags */
 p.tags          { text-align: right; }
-ul.tagcloud     { font-size: 16px; margin: 36px 0; padding: 0;
+ul.tagcloud     { font-size: 1em; margin: 2em 0; padding: 0;
                   list-style: none; }
-ul.tagcloud li  { margin: 0; padding: 0 10px; display: inline; }
+ul.tagcloud li  { margin: 0; padding: 0 1em; display: inline; }
 
 /* latex math */
-span.math img   { margin-bottom: -7px; }
+span.math img   { margin-bottom: -0.5em; }

@@ -10,5 +10,5 @@ serve:
 	run-rstblog serve
 
 upload:
-	rsync -a _build/ solos.so:/var/www/solos.so
+	rsync -a _build/ root@solos.so:/var/www/solos.so
 	@echo "Done..."
