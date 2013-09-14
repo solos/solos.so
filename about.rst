@@ -19,6 +19,6 @@ public: yes
 --------
 
 - `solos.so <http://solos.so>`_
-- `歌词迷 <http://geci.me>`_
+- `歌词迷 <http://gecimi.com>`_
 - `byd.me <http://byd.me>`_
 - `linuxfan.me <http://linuxfan.me>`_
