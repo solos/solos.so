@@ -5,7 +5,8 @@
   <ul>
   {%- for entry in entries %}
     <li><a href="{{ link_to('page', slug=entry.slug) }}">{{ entry.title }}</a>
-    {%- if entry.pub_date %}, written on {{ format_date(entry.pub_date, format='long') }}{% endif %}
+    {%- if entry.pub_date %}, 发表于 <a href="/{{ format_date(entry.pub_date, format='yyyy') }}/">{{ format_date(entry.pub_date, format='yyyy') }}</a>年<a href="/{{ format_date(entry.pub_date, format='yyyy/MM') }}/">{{ format_date(entry.pub_date, format='MM') }}</a>月{{ format_date(entry.pub_date, format='dd') }}日
+    {% endif %}
   {%- endfor %}
   </ul>
 {% endblock %}

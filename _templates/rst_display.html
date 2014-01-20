@@ -5,13 +5,13 @@
   {{ rst.html_title }}
   {%- endif %}
   {% if ctx.pub_date %}
-  <p class=date>written on {{ format_date(ctx.pub_date, format='full') }}
+  <p class=date>发表于 <a href="/{{ format_date(ctx.pub_date, format='yyyy') }}/">{{ format_date(ctx.pub_date, format='yyyy') }}</a> / <a href="/{{ format_date(ctx.pub_date, format='yyyy/MM') }}/">{{ format_date(ctx.pub_date, format='MM') }}</a> / {{ format_date(ctx.pub_date, format='dd') }}
   {% endif %}
 
   {{ rst.fragment }}
 
   {% if ctx.tags %}
-  <p class=tags>This entry was tagged
+  <p class=tags> 标签
     {% for tag in ctx.tags|sort(case_sensitive=true) %}
       {%- if not loop.first and not loop.last %}, {% endif -%}
       {%- if loop.last and not loop.first %} and {% endif %}
