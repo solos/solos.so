@@ -10,7 +10,7 @@
       <ul>
       {%- for subentry in entry.months %}
         <li><a href="{{ link_to('blog_archive', year=entry.year,
-                                month=subentry.month) }}">{{ subentry.month_name }}</a>
+                                month=subentry.month) }}">{{ subentry.month }}</a>
           — {{ subentry.count }} {{ 'entry' if subentry.count == 1 else 'entries' }}
       {%- endfor %}
       </ul>
