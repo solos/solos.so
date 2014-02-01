@@ -5,7 +5,7 @@
   {%- for entry in pagination.get_slice() %}
   <div class=entry-overview>
     <div class=date>
-        <a href="/{{ format_date(entry.pub_date, format='yyyy') }}/">{{ format_date(entry.pub_date, format='yyyy') }}</a> / <a href="/{{ format_date(entry.pub_date, format='yyyy/MM') }}/">{{ format_date(entry.pub_date, format='MM') }}</a> / {{ format_date(entry.pub_date, format='dd') }}
+        <a href="/{{ format_date(entry.pub_date, format='yyyy') }}/">{{ format_date(entry.pub_date, format='yyyy') }}</a> / <a href="/{{ format_date(entry.pub_date, format='yyyy/MM') }}/">{{ format_date(entry.pub_date, format='MM') }}</a> / <a href="/{{ format_date(entry.pub_date, format='yyyy/MM/dd') }}/{{ entry.title }}">{{ format_date(entry.pub_date, format='dd') }}</a>
     </div>
     <div class=detail>
       <h1><a href="{{ link_to('page', slug=entry.slug) }}">{{ entry.title }}</a></h1>

@@ -5,7 +5,7 @@
   {{ rst.html_title }}
   {%- endif %}
   {% if ctx.pub_date %}
-  <p class=date>发表于 <a href="/{{ format_date(ctx.pub_date, format='yyyy') }}/">{{ format_date(ctx.pub_date, format='yyyy') }}</a> / <a href="/{{ format_date(ctx.pub_date, format='yyyy/MM') }}/">{{ format_date(ctx.pub_date, format='MM') }}</a> / {{ format_date(ctx.pub_date, format='dd') }}
+  <p class=date>发表于 <a href="/{{ format_date(ctx.pub_date, format='yyyy') }}/">{{ format_date(ctx.pub_date, format='yyyy') }}</a> / <a href="/{{ format_date(ctx.pub_date, format='yyyy/MM') }}/">{{ format_date(ctx.pub_date, format='MM') }}</a> / <a href="/{{ format_date(ctx.pub_date, format='yyyy/MM/dd') }}/{{ rst.title }}">{{ format_date(ctx.pub_date, format='dd') }}</a>
   {% endif %}
 
   {{ rst.fragment }}
