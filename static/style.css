@@ -33,8 +33,9 @@ div.navigation ul           { margin: 0; padding: 0; list-style: none; }
 div.navigation ul li        { display: inline; margin: 0; padding: 0 0 0 0.5em; }
 div.navigation ul li a       { text-decoration: none; color: #aaa;}
 div.body                    { clear: both; }
-div.footer                  { border-top: 1px solid #555; padding-top: 9px;
-                              margin-top: 42px; font-size: 16px;
+div.footer                  { border-top: 0.3em solid #000000; 
+                              padding-top: 9px;
+                              margin-top: 42px; margin-bottom: 1.2em; font-size: 16px;
                               text-align: center; color: #555; }
 div.footer p                { margin: 0; }
 
@@ -81,7 +82,7 @@ div.entry-overview div.summary p    { margin: 0; padding: 0; }
 div.entry-overview div.detail       { margin: 0; }
 div.entry-overview div.detail a     { color: #000000; text-decoration: none; }
 div.entry-overview div.detail a:hover     { color: #ff4b33; }
-div.entry-overview div.date         { width: 20%; color: #777; 
+div.entry-overview div.date         { width: 74%; color: #777; 
                                       font-size: 1em; }
 div.entry-overview div.date a       { color: #777; }
 div.entry-overview div.date a:hover       { color: #ff4b33; }
