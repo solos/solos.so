@@ -9,6 +9,6 @@ public: yes
 
     `峰云 <http://xiaorui.cc/>`_
 
-    `振萍 <http://www.loverping.com/>`_
+    `振萍 <http://www.lovelyping.com/>`_
 
     `那年那个死孩子 <http://sihaizi.com/>`_
