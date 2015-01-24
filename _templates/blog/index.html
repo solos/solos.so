@@ -4,16 +4,28 @@
 
   {%- for entry in pagination.get_slice() %}
   <div class=entry-overview>
-    <div class=date>
-        <a href="/{{ format_date(entry.pub_date, format='yyyy') }}/">{{ format_date(entry.pub_date, format='yyyy') }}</a> / <a href="/{{ format_date(entry.pub_date, format='yyyy/MM') }}/">{{ format_date(entry.pub_date, format='MM') }}</a> / <a href="/{{ format_date(entry.pub_date, format='yyyy/MM/dd') }}/{{ entry.title }}">{{ format_date(entry.pub_date, format='dd') }}</a>
-    </div>
     <div class=detail>
-      <h1><a href="{{ link_to('page', slug=entry.slug) }}">{{ entry.title }}</a></h1>
-      {%- for tag in entry.tags|sort(case_sensitive=true) %}
-      {%- if not loop.first and not loop.last %} {% endif -%}
-      {%- if loop.last and not loop.first %} {% endif %}
-      <a href="{{ link_to('tag', tag=tag) }}">#{{ tag }}</a>
-      {%- endfor %}
+      <div class="title">
+          <h1><a href="{{ link_to('page', slug=entry.slug) }}">{{ entry.title }}</a></h1>
+      </div>
+      <div class="date-tags">
+        <ul>
+            <li class="date">
+                <i class="fa fa-calendar"></i>
+                <a href="/{{ format_date(entry.pub_date, format='yyyy') }}/">{{ format_date(entry.pub_date, format='yyyy') }}</a>-<a href="/{{ format_date(entry.pub_date, format='yyyy/MM') }}/">{{ format_date(entry.pub_date, format='MM') }}</a>-<a href="/{{ format_date(entry.pub_date, format='yyyy/MM/dd') }}/{{ entry.title }}">{{ format_date(entry.pub_date, format='dd') }}</a>
+            </li>
+            <li class="tags">
+                <i class="fa fa-tags"></i>
+                {%- for tag in entry.tags|sort(case_sensitive=true) %}
+                {%- if not loop.first and not loop.last %} {% endif -%}
+                {%- if loop.last and not loop.first %} {% endif %}
+                <a href="{{ link_to('tag', tag=tag) }}">{{ tag }}</a>
+                {%- endfor %}
+            </li>
+        </ul>
+
+      </div>
+
       {% if entry.summary %}
       <div class=summary>{{ entry.render_summary() }}</div>
       {% endif %}

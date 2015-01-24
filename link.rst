@@ -1,6 +1,6 @@
 public: yes
 
-友情链接
+友链
 =========
 
     `浩哥 <http://huhao.me/>`_

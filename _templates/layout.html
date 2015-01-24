@@ -6,8 +6,12 @@
     <title>{% block title %}Home{% endblock %} | solos的网络日志</title>
     <link rel="openid.server" href="http://www.myopenid.com/server">
     <link rel="openid.delegate" href="http://solos.myopenid.com/">
+
     <link rel="stylesheet" href="/static/reset.css" type="text/css">
     <link rel="stylesheet" href="/static/style.css" type="text/css">
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
     <link href="/feed.atom" rel="alternate" title="Recent Blog Posts" type="application/atom+xml">
     {%- for link in links %}
     <link rel="{{ link.rel }}" href="{{ link.href }}"{%
@@ -22,14 +26,14 @@
       </div>
       <div class=navigation>
         <ul>
-          <li><a href="/">blog</a>
-          <li><a href="/archive/">archive</a>
-          <li><a href="/tags/">tags</a>
-          <li><a href="/projects/">projects</a>
-          <li><a href="/lastfm/">last.fm</a>
-          <li><a href="/fanfou/">饭否</a>
-          <li><a href="/link/">友情链接</a>
-          <li><a href="/about/">关于我</a>
+          <li><i class="fa fa-home"></i><a href="/">博客</a></li>
+          <li><i class="fa fa-archive"></i><a href="/archive/">归档</a></li>
+          <li><i class="fa fa-tag"></i><a href="/tags/">标签</a></li>
+          <li><i class="fa fa-rocket"></i><a href="/projects/">项目</a></li>
+          <li><i class="fa fa-lastfm"></i><a href="/lastfm/">last.fm</a></li>
+          <li><i class="fa fa-link"></i><a href="/link/">友链</a></li>
+          <li><i class="fa fa-anchor"></i><a href="/about/">关于</a>
+          <li><i class="fa fa-rss"></i><a href="/feed.atom" target="_blank">订阅</a>
         </ul>
       </div>
       <div class=body>
@@ -37,18 +41,16 @@
       </div>
 
       <div class=footer>
-        <p>&copy; Copyright {{ format_date(format='YYYY') }} by <a href="/about/">solos</a></p>
-          Contact me via <a href="mailto:solos@solos.so">mail</a>,
-          <a href="http://twitter.com/jht360">twitter</a>,
-          <a href="http://weibo.com/appl">新浪微博</a>,
-          <a href="http://github.com/solos">github</a> or
-          <a href="http://bitbucket.org/solos">bitbucket</a>.
-        (<a href="/feed.atom" rel="alternate" title="Recent Blog Posts">feed</a>)
+        <p>&copy; Copyleft {{ format_date(format='YYYY') }} by <a href="/about/">solos</a></p>
+        <a href="mailto:solos@solos.so" title="邮件" target="_blank"><i class="fa fa-envelope"></i></a>
+        <a href="http://twitter.com/jht360" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="http://weibo.com/appl" title="微博" target="_blank"><i class="fa fa-weibo"></i></a>
+        <a href="http://github.com/solos" title="Github" target="_blank"><i class="fa fa-github"></i></a>
+        <a href="http://bitbucket.org/solos" title="Bitbucket" target="_blank"><i class="fa fa-bitbucket"></i></a>
       </div>
     </div>
 
     {% block comment %}{% endblock %}
-    
     <script type="text/javascript">
 
       var _gaq = _gaq || [];
@@ -57,7 +59,7 @@
 
       (function() {
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        ga.src = '/static/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
     </script>

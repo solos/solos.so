@@ -1,6 +1,4 @@
 /* fonts */
-@import url(http://fonts.googleapis.com/css?family=Merriweather:400,300);
-@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,400italic,700,700italic);
 
 /* general style */
 body    { font: 17px/25px arial, sans-serif; 
@@ -31,13 +29,15 @@ div.navigation              { display: block; background: #000000; margin: 0 aut
 div.navigation              { font-size: 1em; line-height: 1.8em;}
 div.navigation ul           { margin: 0; padding: 0; list-style: none; }
 div.navigation ul li        { display: inline; margin: 0; padding: 0 0 0 0.5em; }
-div.navigation ul li a       { text-decoration: none; color: #aaa;}
+div.navigation ul li a      { text-decoration: none; color: #aaa;}
+div.navigation ul li i      { color: #999; margin-right: 4px; }
 div.body                    { clear: both; }
 div.footer                  { border-top: 0.3em solid #000000; 
                               padding-top: 9px;
                               margin-top: 42px; margin-bottom: 1.2em; font-size: 16px;
                               text-align: center; color: #555; }
 div.footer p                { margin: 0; }
+div.footer a i              { font-size: 1.5em; }
 
 /* margins and stuff */
 p                               { margin: 5px 0 5px 0; }
@@ -49,7 +49,10 @@ ul ol, ol ul, ul ul, ol ol      { margin: 10px 0; padding: 0 0 0 40px; }
 li                              { padding: 0; }
 /* h1 + p.date                     { margin-top: -25px; } */
 p.date  { color: #777 }
-p.date a { color: #777 }
+p.date a { color: #777; text-decoration: none;}
+p.date i { margin-right: 3px;}
+li.date a {text-decoration: none;}
+i.head {margin-right: 6px;}
 
 /* code formatting.  no monospace because of webkit (bug?) */
 pre, code, tt   { font-family: 'Ubuntu Mono', 'Consolas', 'Deja Vu Sans Mono',
@@ -84,8 +87,11 @@ div.entry-overview div.detail a     { color: #000000; text-decoration: none; }
 div.entry-overview div.detail a:hover     { color: #ff4b33; }
 div.entry-overview div.date         { width: 74%; color: #777; 
                                       font-size: 1em; }
-div.entry-overview div.date a       { color: #777; }
-div.entry-overview div.date a:hover       { color: #ff4b33; }
+div.entry-overview div.date a       { color: #777; text-decoration: none;}
+div.entry-overview div.date a:hover       { color: #ff4b33; text-decoration:underline;}
+
+div.date-tags ul {margin: 5px 0 0 0; font-size: 14px;}
+div.date-tags ul li {display: inline; margin-right: 4px;}
 
 div.entry-overview h1               { font-size: 1.3em; font-weight: normal;}
 /* div.entry-overview h1:after         { content: " —"; } */

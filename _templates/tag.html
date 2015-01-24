@@ -1,12 +1,17 @@
 {% extends "layout.html" %}
-{% block title %}Entries tagged “{{ tag.name }}”{% endblock %}
+{% block title %} <i class="fa fa-tag">{{ tag.name }}</i>{% endblock %}
 {% block body %}
-  <h1>Entries <a href="{{ link_to('tagcloud') }}">tagged</a> “{{ tag.name }}”</h1>
+  <h1><i class="head fa fa-tag"></i>{{ tag.name }}</h1>
   <ul>
   {%- for entry in entries %}
-    <li><a href="{{ link_to('page', slug=entry.slug) }}">{{ entry.title }}</a>
-    {%- if entry.pub_date %}, 发表于 <a href="/{{ format_date(entry.pub_date, format='yyyy') }}/">{{ format_date(entry.pub_date, format='yyyy') }}</a>年<a href="/{{ format_date(entry.pub_date, format='yyyy/MM') }}/">{{ format_date(entry.pub_date, format='MM') }}</a>月<a href="{{ link_to('page', slug=entry.slug) }}">{{ format_date(entry.pub_date, format='dd') }}</a>日
-    {% endif %}
+    <li class="date">
+        {%- if entry.pub_date %}
+            <i class="fa fa-calendar"></i>
+            <a href="/{{ format_date(entry.pub_date, format='yyyy') }}/">{{ format_date(entry.pub_date, format='yyyy') }}</a>-<a href="/{{ format_date(entry.pub_date, format='yyyy/MM') }}/">{{ format_date(entry.pub_date, format='MM') }}</a>-<a href="{{ link_to('page', slug=entry.slug) }}">{{ format_date(entry.pub_date, format='dd') }}</a>
+        {% endif %}
+        &nbsp;
+        <a href="{{ link_to('page', slug=entry.slug) }}">{{ entry.title }}</a>
+    </li>
   {%- endfor %}
   </ul>
 {% endblock %}
