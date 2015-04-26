@@ -19,7 +19,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover      { text-decoration: underline
 h1.title                    { font-size: 1.5em; text-decoration: none;}
 h1, h2                      { margin: 0; }
 h1                          { font-size: 1.5em; }
-h2                          { font-size: 1.2em; }
+h2                          { font-size: 1.2em; font-weight: bold; }
 
 /* layout elements */
 div.container               { width: 74%; margin: 0 auto; padding: 0 1.2em 0 1.2em; background-color:#ffffff;}
@@ -47,6 +47,9 @@ dt                              { margin: 25px 0 16px 0; padding: 0; }
 dd                              { margin: 16px 0 25px 40px; padding: 0; }
 ul ol, ol ul, ul ul, ol ol      { margin: 10px 0; padding: 0 0 0 40px; }
 li                              { padding: 0; }
+ul.simple { padding: 0; margin: 1em 0 0 1em; list-style-type: square; }
+ul#last_fm_tracks li { padding: 0; margin: 0 0 0 1em; list-style-type: square; }
+
 /* h1 + p.date                     { margin-top: -25px; } */
 p.date  { color: #777 }
 p.date a { color: #777; text-decoration: none;}

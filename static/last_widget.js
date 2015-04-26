@@ -3,7 +3,8 @@ var holder;
 function loadLastFMTracks(username,holder_id){
     holder=holder_id;
     if (typeof holder=='undefined') holder='last_fm_tracks';
-    loadJS('http://pipes.yahoo.com/pipes/pipe.run?_id=dee4ce450c3cbdcfce7ea7d0c4564120&_render=json&user='+username+'&_callback=processLast',false);
+    //loadJS('http://pipes.yahoo.com/pipes/pipe.run?_id=dee4ce450c3cbdcfce7ea7d0c4564120&_render=json&user='+username+'&_callback=processLast',false);
+    loadJS('http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=jht360&api_key=65e614411ee4673cf1b3e6755448c14a&format=json&callback=processLast', false);
 }
 
 function loadJS(url,cache){
@@ -46,14 +47,13 @@ function relative_time(time_value) {
     }
 }
 function processLast(feed){
-    var tracks= feed.value.items[0].recenttracks.track;
-    console.log(tracks);
+    var tracks= feed.recenttracks.track;
     var str='';
     for (var i=0;i<10;i++){
-        str += '<li><a href="http://gecimi.com/artist/' + tracks[i].artist.content + '">' + tracks[i].artist.content + '</a> - <a href="http://gecimi.com/search/song/' + tracks[i].name + '">' + tracks[i].name + '</a>';
-        if(tracks[i].nowplaying) str+=' 现在在听 <img src="/static/np.gif" alt="">';
-        else{
-            str += ' ' + relative_time(new Date(tracks[i].date.content));
+        str += '<li><a href="http://gecimi.com/artist/' + tracks[i].artist['#text'] + '">' + tracks[i].artist['#text'] + '</a> - <a href="http://gecimi.com/search/song/' + tracks[i].name + '">' + tracks[i].name + '</a>';
+        if ("@attr" in tracks[i] && "nowplaying" in tracks[i]["@attr"]) str+=' 现在在听 <img src="/static/np.gif" alt="">';
+        else {
+            str += ' ' + relative_time(new Date(parseInt(tracks[i].date["uts"]) * 1000));
         }
         str += '</li>'
     }

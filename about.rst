@@ -3,7 +3,7 @@ public: yes
 关于我
 ======
 
-我是solos, 爱Python, 爱WEB，爱Linux，爱Beyond，刚买了个LX5，初学摄影。
+我是solos, 爱Python, 爱WEB，爱Linux，爱Beyond。
 
 联系方式
 --------
