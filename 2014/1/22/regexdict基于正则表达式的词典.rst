@@ -1,5 +1,5 @@
 public: yes
-tags: [regexdict, regex, dict, 正则表达式, 词典, chrome, 插件]
+tags: [regexdict, RegEx, 正则表达式, Chrome插件]
 summary: 
 
 regexdict 基于正则表达式的词典

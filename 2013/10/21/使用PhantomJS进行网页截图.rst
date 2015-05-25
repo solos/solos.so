@@ -1,5 +1,5 @@
 public: yes
-tags: [PhantomJs, 网页截图, 字体]
+tags: [PhantomJS, 网页截图, 字体]
 summary: 
 
 使用PhantomJS进行网页截图

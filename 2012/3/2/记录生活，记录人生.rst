@@ -1,5 +1,5 @@
 public: yes
-tags: [blog, 随想, 感悟, 日记]
+tags: [Blog, 随想, 感悟, 日记]
 summary: 
 
 记录生活，记录人生 

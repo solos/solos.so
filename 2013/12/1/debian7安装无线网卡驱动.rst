@@ -1,12 +1,12 @@
 public: yes
-tags: [debian7, 无线网卡, 驱动, iwlwifi, linux]
+tags: [Debian7, 无线网卡, 驱动, iwlwifi, Linux]
 summary: 
 
-debian7 安装无线网卡驱动
+Debian7 安装无线网卡驱动
 =========================================================
 
 
-| 升级了debian 7, 结果发现无线网络不能用了，安装了firmware-iwlwifi，还是不能用，应该是驱动的问题， 看来需要重新安装无线网卡驱动。
+| 升级了Debian 7, 结果发现无线网络不能用了，安装了firmware-iwlwifi，还是不能用，应该是驱动的问题， 看来需要重新安装无线网卡驱动。
 
 
 查看无线网卡型号 

@@ -1,5 +1,5 @@
 public: yes
-tags: [Linux, ssh, 出国]
+tags: [Linux, SSH, 出国]
 summary: 
 
 Linux VPS SSH出国

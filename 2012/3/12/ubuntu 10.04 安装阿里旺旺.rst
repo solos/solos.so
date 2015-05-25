@@ -1,5 +1,5 @@
 public: yes
-tags: [ubuntu, linux, 阿里旺旺]
+tags: [Ubuntu, Linux, 阿里旺旺]
 summary: 
 
 ubuntu 10.04 安装阿里旺旺

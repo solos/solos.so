@@ -1,5 +1,5 @@
 public: yes
-tags: [pip, python, uwsgi]
+tags: [Pip, Python, uWSGI]
 summary: 
 
 用Python pip安装uWsgi

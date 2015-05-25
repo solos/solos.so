@@ -1,5 +1,5 @@
 public: yes
-tags: [unix, linux]
+tags: [Unix, Linux]
 summary: 
 
 Unix高手的10个习惯

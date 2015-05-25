@@ -1,5 +1,5 @@
 public: yes
-tags: [Dropbox, ubuntu]
+tags: [Dropbox, Ubuntu]
 summary: 
 
 使用Dropbox同步Linux配置文件

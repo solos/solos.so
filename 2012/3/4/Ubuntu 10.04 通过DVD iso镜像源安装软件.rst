@@ -1,5 +1,5 @@
 public: yes
-tags: [ubuntu, iso镜像源]
+tags: [Ubuntu, ISO镜像源]
 summary: 
 
 Ubuntu 10.04 通过DVD iso镜像源安装软件

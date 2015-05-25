@@ -1,5 +1,5 @@
 public: yes
-tags: [ubuntu, mysql, 编码]
+tags: [Ubuntu, MySQL, 编码]
 summary: 
 
 Ubuntu下修改Mysql默认编码

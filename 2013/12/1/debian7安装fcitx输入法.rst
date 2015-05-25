@@ -1,11 +1,11 @@
 public: yes
-tags: [debian7, fcitx, 输入法]
+tags: [Debian7, Fcitx, 输入法]
 summary: 
 
-debian7编译安装fcitx输入法
+Debian7编译安装fcitx输入法
 =========================================================
 
- 记录下debian7安装fcitx输入法的过程，以后写个脚本搞搞自动化（又不知道得拖到哪天）。
+ 记录下Debian7安装fcitx输入法的过程，以后写个脚本搞搞自动化（又不知道得拖到哪天）。
 
 安装依赖
 --------

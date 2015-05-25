@@ -1,5 +1,5 @@
 public: yes
-tags: [evernote, android, 印象笔记, 离线笔记]
+tags: [Evernote, Android, 印象笔记, 离线笔记]
 summary: 
 
 程序员应该如何使用印象笔记android版

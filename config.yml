@@ -4,4 +4,4 @@ author: solos
 canonical_url: http://solos.so
 modules:
   pygments:
-    style: tango
+    style: default

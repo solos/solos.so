@@ -1,5 +1,5 @@
 public: yes
-tags: [ubuntu, 背单词, 语言岛]
+tags: [Ubuntu, 背单词, 语言岛]
 summary: 
 
 Ubuntu10.04安装语言岛智能记单词

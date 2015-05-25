@@ -1,5 +1,5 @@
 public: yes
-tags: [python, pylons, sqlalchemy]
+tags: [Python, Pylons, SQLAlchemy]
 summary: 
 
 使用sqlalchemy遇到的一个问题
