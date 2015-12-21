@@ -1,4 +1,4 @@
-public: yes
+public: no
 tags: [postfix, 邮件服务器,]
 summary: 
 
