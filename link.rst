@@ -9,6 +9,7 @@ public: yes
 
     `峰云 <http://xiaorui.cc/>`_
 
-    `振萍 <http://www.lovelyping.com/>`_
-
     `那年那个死孩子 <http://sihaizi.com/>`_
+
+    `hackrole's note <http://note.hackrole.com/>`_
+    `Mcool音乐播放器 <http://mcool.appinn.me/>`_
