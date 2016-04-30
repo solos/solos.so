@@ -32,6 +32,7 @@ div.navigation ul li        { display: inline; margin: 0; padding: 0 0 0 0.5em; 
 div.navigation ul li a      { text-decoration: none; color: #aaa;}
 div.navigation ul li i      { color: #999; margin-right: 4px; }
 div.body                    { clear: both; }
+div.body > ul > li          { margin-left: 1em; }
 div.footer                  { border-top: 0.3em solid #000000; 
                               padding-top: 9px;
                               margin-top: 42px; margin-bottom: 1.2em; font-size: 16px;
