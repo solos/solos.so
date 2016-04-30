@@ -2,26 +2,26 @@ public: yes
 tags: [swift, 学习笔记]
 summary: 
 
-Swift学习笔记
+Swift语言学习笔记
 ==============================
 
 
 - 如何声明常量、变量
 
-.. code-block:: swift
+    .. code-block:: swift
 
-    let count = 0   // let声明常量
-    var summary = 0 // var声明变量
-    var foo = 10, bar = 20 // 单行中声明多个变量或者常量使用逗号分隔
-    var message: String // 类型在变量或者常量名称后面标注，中间用冒号分隔
+        let count = 0   // let声明常量
+        var summary = 0 // var声明变量
+        var foo = 10, bar = 20 // 单行中声明多个变量或者常量使用逗号分隔
+        var message: String // 类型在变量或者常量名称后面标注，中间用冒号分隔
 
 
 - 如何打印变量或者常量的值
 
-.. code-block:: swift
+    .. code-block:: swift
 
-    let msg = "hello, world!"
-    print(msg)
+        let msg = "hello, world!"
+        print(msg)
 
 
 - 注释
@@ -70,38 +70,38 @@ Swift学习笔记
 
 - 可选绑定
 
-.. code-block:: swift
+    .. code-block:: swift
 
-    if let constantName = someOptional {
-        statements
-    }
-    
+        if let constantName = someOptional {
+            statements
+        }
+        
 
 - 数组
 
-.. code-block:: swift
+    .. code-block:: swift
 
-    var arr = [Int]() //创建数组
-    arr.append(10)  // 向数组中添加元素
-    print("arr is of type [Int] with \(arr.count) items.")
-    // arr is of type [Int] with 1 items.
-    var items = [Int](count: 10, repeatedValue:1)  // 创建一个大小为10的数组，默认都是1
-    var shoppingList: [String] = ["Eggs", "Milk"] // shoppingList 已经被构造并且拥有两个初始项。
-    print(shoppingList[0])
-    shoppingList.append("Flour")
-    shoppingList += ["Baking Powder"]
-    shoppingList += ["Chocolate Spread", "Cheese", "Butter"]
-    shoppingList[4...6] = ["Bananas", "Apples"]
-    shoppingList.insert("Maple Syrup", atIndex: 0)
-    shoppingList.removeAtIndex(0)
-    shoppingList.removeLast(0)
-    
-    for item in shoppingList {
-        print item
-    }
-    for (index, value) in shoppingList.enumerate() {
-        print("Item \(String(index + 1)): \(value)")
-    }
+        var arr = [Int]() //创建数组
+        arr.append(10)  // 向数组中添加元素
+        print("arr is of type [Int] with \(arr.count) items.")
+        // arr is of type [Int] with 1 items.
+        var items = [Int](count: 10, repeatedValue:1)  // 创建一个大小为10的数组，默认都是1
+        var shoppingList: [String] = ["Eggs", "Milk"] // shoppingList 已经被构造并且拥有两个初始项。
+        print(shoppingList[0])
+        shoppingList.append("Flour")
+        shoppingList += ["Baking Powder"]
+        shoppingList += ["Chocolate Spread", "Cheese", "Butter"]
+        shoppingList[4...6] = ["Bananas", "Apples"]
+        shoppingList.insert("Maple Syrup", atIndex: 0)
+        shoppingList.removeAtIndex(0)
+        shoppingList.removeLast(0)
+        
+        for item in shoppingList {
+            print item
+        }
+        for (index, value) in shoppingList.enumerate() {
+            print("Item \(String(index + 1)): \(value)")
+        }
 
 
 - 集合
@@ -136,31 +136,31 @@ Swift学习笔记
 
 - 字典
 
-.. code-block:: swift
-    
-    var namesOfIntegers = [Int: String]() // 创建一个空字典
-    namesOfIntegers[16] = "sixteen"
-    namesOfIntegers = [:]
-    var airports: [String: String] = ["YYZ": "Toronto Pearson", "DUB": "Dublin"] // 使用字典字面量创建字典
-    var d = ["foo": "bar"]
-    d["foo"] = nil
+    .. code-block:: swift
+        
+        var namesOfIntegers = [Int: String]() // 创建一个空字典
+        namesOfIntegers[16] = "sixteen"
+        namesOfIntegers = [:]
+        var airports: [String: String] = ["YYZ": "Toronto Pearson", "DUB": "Dublin"] // 使用字典字面量创建字典
+        var d = ["foo": "bar"]
+        d["foo"] = nil
 
-    if let removedValue = airports.removeValueForKey("DUB") {
-        print("The removed airport's name is \(removedValue).")
-    } else {
-        print("The airports dictionary does not contain a value for DUB.")
-    }
-    for (airportCode, airportName) in airports {
-        print("\(airportCode): \(airportName)")
-    }
-    for airportCode in airports.keys {
-        print("Airport code: \(airportCode)")
-    }
-    for airportName in airports.values {
-        print("Airport name: \(airportName)")
-    }
-    let airportCodes = [String](airports.keys)
-    let airportNames = [String](airports.values)
+        if let removedValue = airports.removeValueForKey("DUB") {
+            print("The removed airport's name is \(removedValue).")
+        } else {
+            print("The airports dictionary does not contain a value for DUB.")
+        }
+        for (airportCode, airportName) in airports {
+            print("\(airportCode): \(airportName)")
+        }
+        for airportCode in airports.keys {
+            print("Airport code: \(airportCode)")
+        }
+        for airportName in airports.values {
+            print("Airport name: \(airportName)")
+        }
+        let airportCodes = [String](airports.keys)
+        let airportNames = [String](airports.values)
 
 
 - 控制流
@@ -527,8 +527,10 @@ Swift学习笔记
     - 属性观察器
 
         属性观察器监控和响应属性值的变化，每次属性被设置值的时候都会调用属性观察器，即使新值和当前值相同的时候也不例外。
-        可以为除了延迟存储属性之外的其他存储属性添加属性观察器，也可以通过重写属性的方式为继承的属性（包括存储属性和计算属性）添加属性观察器。你不必为非重写的计算属性添加属性观察器，因为可以通过它的 setter 直接监控和响应值的变化。
+        可以为除了延迟存储属性之外的其他存储属性添加属性观察器，也可以通过重写属性的方式为继承的属性（包括存储属性和计算属性）添加属性观察器。
+        你不必为非重写的计算属性添加属性观察器，因为可以通过它的 setter 直接监控和响应值的变化。
         可以为属性添加如下的一个或全部观察器：
+        
             - willSet 在新的值被设置之前调用
             - didSet 在新的值被设置之后立即调用
 
@@ -607,7 +609,6 @@ Swift学习笔记
 
     - 方法
 
-
         - 实例方法
 
             .. code-block:: swift
@@ -625,102 +626,112 @@ Swift学习笔记
                     }
                 }
 
+
             结构体和枚举是值类型。默认情况下，值类型的属性不能在它的实例方法中被修改。
 
             - 在实例方法中修改值类型
 
-                struct Point {
-                    var x = 0.0, y = 0.0
-                    mutating func moveByX(deltaX: Double, y deltaY: Double) {
-                        x += deltaX
-                        y += deltaY
+                .. code-block:: swift
+
+                    struct Point {
+                        var x = 0.0, y = 0.0
+                        mutating func moveByX(deltaX: Double, y deltaY: Double) {
+                            x += deltaX
+                            y += deltaY
+                        }
                     }
-                }
-                var somePoint = Point(x: 1.0, y: 1.0)
-                somePoint.moveByX(2.0, y: 3.0)
-                print("The point is now at (\(somePoint.x), \(somePoint.y))")
-                // 打印输出: "The point is now at (3.0, 4.0)"
+                    var somePoint = Point(x: 1.0, y: 1.0)
+                    somePoint.moveByX(2.0, y: 3.0)
+                    print("The point is now at (\(somePoint.x), \(somePoint.y))")
+                    // 打印输出: "The point is now at (3.0, 4.0)"
 
         - 类型方法
 
-            class Player {
-                var tracker = LevelTracker()
-                let playerName: String
-                func completedLevel(level: Int) {
-                    LevelTracker.unlockLevel(level + 1)
-                    tracker.advanceToLevel(level + 1)
-                }
-                init(name: String) {
-                    playerName = name
-                }
-            }
+            .. code-block:: swift
 
-            var player = Player(name: "Argyrios")
-            player.completedLevel(1)
-            print("highest unlocked level is now \(LevelTracker.highestUnlockedLevel)")
-            // 打印输出：highest unlocked level is now 2
+                class Player {
+                    var tracker = LevelTracker()
+                    let playerName: String
+                    func completedLevel(level: Int) {
+                        LevelTracker.unlockLevel(level + 1)
+                        tracker.advanceToLevel(level + 1)
+                    }
+                    init(name: String) {
+                        playerName = name
+                    }
+                }
+
+                var player = Player(name: "Argyrios")
+                player.completedLevel(1)
+                print("highest unlocked level is now \(LevelTracker.highestUnlockedLevel)")
+                // 打印输出：highest unlocked level is now 2
+
             如果你创建了第二个玩家，并尝试让他开始一个没有被任何玩家解锁的等级，那么试图设置玩家当前等级将会失败：
 
-            player = Player(name: "Beto")
-            if player.tracker.advanceToLevel(6) {
-                print("player is now on level 6")
-            } else {
-                print("level 6 has not yet been unlocked")
-            }
-            // 打印输出：level 6 has not yet been unlocked
+            .. code-block:: swift
+
+                player = Player(name: "Beto")
+                if player.tracker.advanceToLevel(6) {
+                    print("player is now on level 6")
+                } else {
+                    print("level 6 has not yet been unlocked")
+                }
+                // 打印输出：level 6 has not yet been unlocked
 
 - 继承
 
     - 基类和子类
 
-        class Vehicle {
-            var currentSpeed = 0.0
-            var description: String {
-                return "traveling at \(currentSpeed) miles per hour"
-            }
-            func makeNoise() {
-                // 什么也不做-因为车辆不一定会有噪音
-            }
-        }
+        .. code-block:: swift
 
-        class Bicycle: Vehicle {
-            var hasBasket = false
-        }
-
-        class Train: Vehicle {
-            override func makeNoise() {
-                print("Choo Choo")
-            }
-        }
-
-        class Car: Vehicle {
-            var gear = 1
-            override var description: String {
-                return super.description + " in gear \(gear)"
-            }
-        }
-
-        let car = Car()
-        car.currentSpeed = 25.0
-        car.gear = 3
-        print("Car: \(car.description)")
-        // Car: traveling at 25.0 miles per hour in gear 3
-
-        class AutomaticCar: Car {
-            override var currentSpeed: Double {
-                didSet {
-                    gear = Int(currentSpeed / 10.0) + 1
+            class Vehicle {
+                var currentSpeed = 0.0
+                var description: String {
+                    return "traveling at \(currentSpeed) miles per hour"
+                }
+                func makeNoise() {
+                    // 什么也不做-因为车辆不一定会有噪音
                 }
             }
-        }
 
-        let automatic = AutomaticCar()
-        automatic.currentSpeed = 35.0
-        print("AutomaticCar: \(automatic.description)")
-        // AutomaticCar: traveling at 35.0 miles per hour in gear 4
+            class Bicycle: Vehicle {
+                var hasBasket = false
+            }
+
+            class Train: Vehicle {
+                override func makeNoise() {
+                    print("Choo Choo")
+                }
+            }
+
+            class Car: Vehicle {
+                var gear = 1
+                override var description: String {
+                    return super.description + " in gear \(gear)"
+                }
+            }
+
+            let car = Car()
+            car.currentSpeed = 25.0
+            car.gear = 3
+            print("Car: \(car.description)")
+            // Car: traveling at 25.0 miles per hour in gear 3
+
+            class AutomaticCar: Car {
+                override var currentSpeed: Double {
+                    didSet {
+                        gear = Int(currentSpeed / 10.0) + 1
+                    }
+                }
+            }
+
+            let automatic = AutomaticCar()
+            automatic.currentSpeed = 35.0
+            print("AutomaticCar: \(automatic.description)")
+            // AutomaticCar: traveling at 35.0 miles per hour in gear 4
 
     - 防止重写
 
-        你可以通过把方法，属性或下标标记为final来防止它们被重写，只需要在声明关键字前加上final修饰符即可（例如：final var，final func，final class func，以及final subscript）。
-        如果你重写了final方法，属性或下标，在编译时会报错。在类扩展中的方法，属性或下标也可以在扩展的定义里标记为 final 的。
+        你可以通过把方法，属性或下标标记为final来防止它们被重写，只需要在声明关键字前加上final修饰符即可（例如：final var，final func，final class func，以及final subscript）。  
+        如果你重写了final方法，属性或下标，在编译时会报错。在类扩展中的方法，属性或下标也可以在扩展的定义里标记为 final 的。  
         你可以通过在关键字class前添加final修饰符（final class）来将整个类标记为 final 的。这样的类是不可被继承的，试图继承这样的类会导致编译报错。
