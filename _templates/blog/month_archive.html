@@ -10,7 +10,7 @@
       <li class="date">{%- if entry.pub_date %} 
 
         <i class="fa fa-calendar"></i>
-        <a href="/{{ format_date(entry.pub_date, format='yyyy') }}/">{{ format_date(entry.pub_date, format='yyyy') }}</a>-<a href="/{{ format_date(entry.pub_date, format='yyyy/MM') }}/">{{ format_date(entry.pub_date, format='MM') }}</a>-<a href="/{{ format_date(entry.pub_date, format='yyyy/MM/dd') }}/{{ entry.title }}">{{ format_date(entry.pub_date, format='dd') }}</a> {% endif %}
+        <a href="/{{ format_date(entry.pub_date, format='yyyy') }}/">{{ format_date(entry.pub_date, format='yyyy') }}</a>-<a href="/{{ format_date(entry.pub_date, format='yyyy/MM') }}/">{{ format_date(entry.pub_date, format='MM') }}</a>-<a href="/{{ format_date(entry.pub_date, format='yyyy/M/d') }}/{{ entry.title }}">{{ format_date(entry.pub_date, format='dd') }}</a> {% endif %}
         &nbsp;
       <a href="{{ link_to('page', slug=entry.slug) }}">{{ entry.title }}</a>
       </li>
