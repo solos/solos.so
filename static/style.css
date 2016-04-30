@@ -57,11 +57,14 @@ p.date i { margin-right: 3px;}
 li.date a {text-decoration: none;}
 i.head {margin-right: 6px;}
 
+.highlight {
+    color: #839496;
+}
 /* code formatting.  no monospace because of webkit (bug?) */
 pre, code, tt   { font-family: 'Ubuntu Mono', 'Consolas', 'Deja Vu Sans Mono',
                                'Bitstream Vera Sans Mono', 'Monaco', 'Courier New';
                   font-size: 0.9em; }
-pre             { line-height: 1.3; background-color: #022B36; padding: 0; }
+pre             { line-height: 1.3; background-color: #022B36; padding: 1em; }
 code, tt        { background: #eee; }
 
 /* tables */

@@ -10,7 +10,7 @@ Javascript中如何合并两个Object
 
 .. code-block:: javascript
 
-      function merge(target, source) {
+    function merge(target, source) {
 
         if ((typeof target !== 'object') || (typeof source !== 'object')) {
             return {}

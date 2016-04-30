@@ -13,49 +13,49 @@ MongoDB 3.0之前auth很不完善，而且耗时比较长。3.0版本完善了�
 
 .. code-block:: shell
 
-        # mongod.conf
+    # mongod.conf
 
-        # for documentation of all options, see:
-        #   http://docs.mongodb.org/manual/reference/configuration-options/
+    # for documentation of all options, see:
+    #   http://docs.mongodb.org/manual/reference/configuration-options/
 
-        # where to write logging data.
-        systemLog:
-          destination: file
-          logAppend: true
-          path: /var/log/mongodb/mongod.log
+    # where to write logging data.
+    systemLog:
+      destination: file
+      logAppend: true
+      path: /var/log/mongodb/mongod.log
 
-        # Where and how to store data.
-        storage:
-          dbPath: /data/db
-          journal:
-            enabled: true
-          engine: wiredTiger
-        #  mmapv1:
+    # Where and how to store data.
+    storage:
+      dbPath: /data/db
+      journal:
+        enabled: true
+      engine: wiredTiger
+    #  mmapv1:
 
-        # how the process runs
-        processManagement:
-          fork: true  # fork and run in background
-          pidFilePath: /var/run/mongodb/mongod.pid  # location of pidfile
+    # how the process runs
+    processManagement:
+      fork: true  # fork and run in background
+      pidFilePath: /var/run/mongodb/mongod.pid  # location of pidfile
 
-        # network interfaces
-        net:
-          port: 27017
-          bindIp: 127.0.0.1  # Listen to local interface only, comment to listen on all interfaces.
+    # network interfaces
+    net:
+      port: 27017
+      bindIp: 127.0.0.1  # Listen to local interface only, comment to listen on all interfaces.
 
-        security:
-            authorization: enabled   # 开启auth的选项
+    security:
+        authorization: enabled   # 开启auth的选项
 
-        #operationProfiling:
+    #operationProfiling:
 
-        #replication:
+    #replication:
 
-        #sharding:
+    #sharding:
 
-        ## Enterprise-Only Options
+    ## Enterprise-Only Options
 
-        #auditLog:
+    #auditLog:
 
-        #snmp:
+    #snmp:
 
 - 创建管理员用户
 
@@ -86,23 +86,23 @@ MongoDB 3.0之前auth很不完善，而且耗时比较长。3.0版本完善了�
 
 .. code-block:: shell
         
-        > use admin
-        > db.auth('solos', '')
-        use test
-        db.createUser(
-        {
-            user: "readUser",
-            pwd: "password",
-            roles: [ {role: "read", db: "test"}]
-        })
+    > use admin
+    > db.auth('solos', '')
+    use test
+    db.createUser(
+    {
+        user: "readUser",
+        pwd: "password",
+        roles: [ {role: "read", db: "test"}]
+    })
 
-        use test
-        db.createUser(
-        {
-            user: "readWriteUser",
-            pwd: "password",
-            roles: [ {role: "readWrite", db: "test"}]
-        })
+    use test
+    db.createUser(
+    {
+        user: "readWriteUser",
+        pwd: "password",
+        roles: [ {role: "readWrite", db: "test"}]
+    })
 
 
 - 查看所有用户
@@ -111,16 +111,16 @@ MongoDB 3.0之前auth很不完善，而且耗时比较长。3.0版本完善了�
 
 .. code-block:: shell
         
-        > use admin
-        > db.auth('solos', "solos's password")
-        1
-        > db.system.users.find()
-        { "_id" : "admin.solos", "user" : "solos", "db" : "admin",
-            "credentials" : { "SCRAM-SHA-1" : { "iterationCount" : 10000, "salt" : "xxx", "storedKey" : "xxx", "serverKey" : "xxx" } },
-            "roles" : [ { "role" : "userAdminAnyDatabase", "db" : "admin" } ] }
-        { "_id" : "test.readUser", "user" : "readUser", "db" : "test",
-            "credentials" : { "SCRAM-SHA-1" : { "iterationCount" : 10000, "salt" : "xxx", "storedKey" : "xxx", "serverKey" : "xxx" } },
-            "roles" : [ { "role" : "read", "db" : "test" } ] }
-        { "_id" : "test.readWriteUser", "user" : "readWriteUser", "db" : "test",
-            "credentials" : { "SCRAM-SHA-1" : { "iterationCount" : 10000, "salt" : "xxx", "storedKey" : "xxx", "serverKey" : "xxx" } },
-            "roles" : [ { "role" : "readWrite", "db" : "test" } ] }
+    > use admin
+    > db.auth('solos', "solos's password")
+    1
+    > db.system.users.find()
+    { "_id" : "admin.solos", "user" : "solos", "db" : "admin",
+        "credentials" : { "SCRAM-SHA-1" : { "iterationCount" : 10000, "salt" : "xxx", "storedKey" : "xxx", "serverKey" : "xxx" } },
+        "roles" : [ { "role" : "userAdminAnyDatabase", "db" : "admin" } ] }
+    { "_id" : "test.readUser", "user" : "readUser", "db" : "test",
+        "credentials" : { "SCRAM-SHA-1" : { "iterationCount" : 10000, "salt" : "xxx", "storedKey" : "xxx", "serverKey" : "xxx" } },
+        "roles" : [ { "role" : "read", "db" : "test" } ] }
+    { "_id" : "test.readWriteUser", "user" : "readWriteUser", "db" : "test",
+        "credentials" : { "SCRAM-SHA-1" : { "iterationCount" : 10000, "salt" : "xxx", "storedKey" : "xxx", "serverKey" : "xxx" } },
+        "roles" : [ { "role" : "readWrite", "db" : "test" } ] }

@@ -31,7 +31,7 @@ JSON已经成为最流行的数据交换格式，在python里我们可以用json
       } else {
           fmt.Println(err)
       }
-  }
+    }
 
 如果要把JSON转成结构体，只需要调用json.Unmarshal，这在静态语言里比较常见，当然要把结构体传进去。如果不知道JSON的格式或者JSON格式不一致，那就不能用这种方法了，这时候可以转成map。
 
@@ -66,7 +66,7 @@ JSON已经成为最流行的数据交换格式，在python里我们可以用json
       } else {
           fmt.Println(err)
       }
-  }
+    }
 
 输出如下：
 
