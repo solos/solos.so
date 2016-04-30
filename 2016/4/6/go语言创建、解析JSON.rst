@@ -39,7 +39,6 @@ JSON已经成为最流行的数据交换格式，在python里我们可以用json
 .. code-block:: go
 
     package main
-
     import "fmt"
     import "encoding/json"
 
@@ -73,7 +72,6 @@ JSON已经成为最流行的数据交换格式，在python里我们可以用json
 .. code-block:: bash
 
     {"name":"Alice","body":"Hello","time":1294706395881547000}
-
     map[name:Alice body:Hello time:1.294706395881547e+18]
     type float64; value 1.294706395881547e+18
 
