@@ -1,14 +1,14 @@
 all: build upload
 
 clean:
-	rm -rf _build
+	rm -rf public
 
 build:
-	run-rstblog build
+	hexo build
 
 serve:
-	run-rstblog serve
+	hexo serve
 
 upload:
-	rsync -r _build/ vultr:/var/www/solos.so
+	rsync -r public/ vultr:/var/www/solos.so
 	@echo "Done..."
