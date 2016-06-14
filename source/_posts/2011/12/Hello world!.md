@@ -1,7 +1,6 @@
 ---
 title: Hello, world!
-date: 2015-09-28 20:29:48
-updated: 2015-09-28 20:29:49
+date: 2011-12-05 00:00:00
 comments: true
 tags:
     - C语言
