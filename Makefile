@@ -4,7 +4,7 @@ clean:
 	rm -rf public
 
 build:
-	hexo build
+	hexo generate
 
 serve:
 	hexo serve
