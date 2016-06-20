@@ -435,13 +435,11 @@ categories:
     - 类是引用类型
         与值类型不同，引用类型在被赋予到一个变量、常量或者被传递到一个函数时，其值不会被拷贝。因此，引用的是已存在的实例本身而不是其拷贝。
 
-
 - 属性
 
     - 存储属性
 
-        
-        .. code-block:: swift
+        ``` swift
 
             struct FixedLengthRange {
                 var firstValue: Int
@@ -451,13 +449,12 @@ categories:
             // 该区间表示整数0，1，2
             rangeOfThreeItems.firstValue = 6
             // 该区间现在表示整数6，7，8
-
-    
-        常量结构体的存储属性不可以修改
+        ```
+        - 常量结构体的存储属性不可以修改
 
     - 延迟存储属性
 
-        .. code-block:: swift
+        ``` swift
 
             class DataImporter {
                 var fileName = "data.txt"
@@ -477,13 +474,14 @@ categories:
             print(manager.importer.fileName)
             // DataImporter 实例的 importer 属性现在被创建了
             // 输出 "data.txt”
+        ```
 
-            注意:
+        - 注意:
             如果一个被标记为 lazy 的属性在没有初始化时就同时被多个线程访问，则无法保证该属性只会被初始化一次。
 
     - 计算属性
 
-        .. code-block:: swift
+        ``` swift
         
             struct Point {
                 var x = 0.0, y = 0.0
@@ -512,11 +510,11 @@ categories:
             square.center = Point(x: 15.0, y: 15.0)
             print("square.origin is now at (\(square.origin.x), \(square.origin.y))")
             // 输出 "square.origin is now at (10.0, 10.0)”
-
+        ```
 
     - 只读计算属性
 
-        .. code-block:: swift
+        ``` swift
 
             struct Cuboid {
                 var width = 0.0, height = 0.0, depth = 0.0
@@ -527,18 +525,19 @@ categories:
             let fourByFiveByTwo = Cuboid(width: 4.0, height: 5.0, depth: 2.0)
             print("the volume of fourByFiveByTwo is \(fourByFiveByTwo.volume)")
             // 输出 "the volume of fourByFiveByTwo is 40.0"
+        ```
 
     - 属性观察器
 
-        属性观察器监控和响应属性值的变化，每次属性被设置值的时候都会调用属性观察器，即使新值和当前值相同的时候也不例外。
-        可以为除了延迟存储属性之外的其他存储属性添加属性观察器，也可以通过重写属性的方式为继承的属性（包括存储属性和计算属性）添加属性观察器。
-        你不必为非重写的计算属性添加属性观察器，因为可以通过它的 setter 直接监控和响应值的变化。
-        可以为属性添加如下的一个或全部观察器：
+        - 属性观察器监控和响应属性值的变化，每次属性被设置值的时候都会调用属性观察器，即使新值和当前值相同的时候也不例外。
+        - 可以为除了延迟存储属性之外的其他存储属性添加属性观察器，也可以通过重写属性的方式为继承的属性（包括存储属性和计算属性）添加属性观察器。
+        - 你不必为非重写的计算属性添加属性观察器，因为可以通过它的 setter 直接监控和响应值的变化。
+        - 可以为属性添加如下的一个或全部观察器：
         
             - willSet 在新的值被设置之前调用
             - didSet 在新的值被设置之后立即调用
 
-        .. code-block:: swift
+        ``` swift
 
             class StepCounter {
                 var totalSteps: Int = 0 {
@@ -562,20 +561,22 @@ categories:
             stepCounter.totalSteps = 896
             // About to set totalSteps to 896
             // Added 536 steps
+        ```
 
     - 全局变量和局部变量
 
-        计算属性和属性观察器所描述的功能也可以用于全局变量和局部变量。全局变量是在函数、方法、闭包或任何类型之外定义的变量。局部变量是在函数、方法或闭包内部定义的变量。
+        - 计算属性和属性观察器所描述的功能也可以用于全局变量和局部变量。
+            - 全局变量是在函数、方法、闭包或任何类型之外定义的变量。局部变量是在函数、方法或闭包内部定义的变量。
 
-        注意:
+        - 注意:
             - 全局的常量或变量都是延迟计算的，跟延迟存储属性相似，不同的地方在于，全局的常量或变量不需要标记lazy修饰符。
             - 局部范围的常量或变量从不延迟计算。
 
     - 类型属性
 
-        实例属性属于一个特定类型的实例，每创建一个实例，实例都拥有属于自己的一套属性值，实例之间的属性相互独立。也可以为类型本身定义属性，无论创建了多少个该类型的实例，这些属性都只有唯一一份。这种属性就是类型属性。
+        - 实例属性属于一个特定类型的实例，每创建一个实例，实例都拥有属于自己的一套属性值，实例之间的属性相互独立。也可以为类型本身定义属性，无论创建了多少个该类型的实例，这些属性都只有唯一一份。这种属性就是类型属性。
 
-        .. code-block:: swift
+        ``` swift
 
             struct SomeStructure {
                 static var storedTypeProperty = "Some value."
@@ -610,12 +611,13 @@ categories:
             // 输出 "6"
             print(SomeClass.computedTypeProperty)
             // 输出 "27"
+        ```
 
     - 方法
 
         - 实例方法
 
-            .. code-block:: swift
+            ``` swift
 
                 class Counter {
                     var count = 0
@@ -629,13 +631,13 @@ categories:
                         count = 0
                     }
                 }
-
+            ```
 
             结构体和枚举是值类型。默认情况下，值类型的属性不能在它的实例方法中被修改。
 
             - 在实例方法中修改值类型
 
-                .. code-block:: swift
+                ``` swift
 
                     struct Point {
                         var x = 0.0, y = 0.0
@@ -648,10 +650,11 @@ categories:
                     somePoint.moveByX(2.0, y: 3.0)
                     print("The point is now at (\(somePoint.x), \(somePoint.y))")
                     // 打印输出: "The point is now at (3.0, 4.0)"
+                ```
 
         - 类型方法
 
-            .. code-block:: swift
+            ``` swift
 
                 class Player {
                     var tracker = LevelTracker()
@@ -669,10 +672,11 @@ categories:
                 player.completedLevel(1)
                 print("highest unlocked level is now \(LevelTracker.highestUnlockedLevel)")
                 // 打印输出：highest unlocked level is now 2
+            ```
 
             如果你创建了第二个玩家，并尝试让他开始一个没有被任何玩家解锁的等级，那么试图设置玩家当前等级将会失败：
 
-            .. code-block:: swift
+            ``` swift
 
                 player = Player(name: "Beto")
                 if player.tracker.advanceToLevel(6) {
@@ -681,12 +685,13 @@ categories:
                     print("level 6 has not yet been unlocked")
                 }
                 // 打印输出：level 6 has not yet been unlocked
+            ```
 
 - 继承
 
     - 基类和子类
 
-        .. code-block:: swift
+        ``` swift
 
             class Vehicle {
                 var currentSpeed = 0.0
@@ -733,9 +738,10 @@ categories:
             automatic.currentSpeed = 35.0
             print("AutomaticCar: \(automatic.description)")
             // AutomaticCar: traveling at 35.0 miles per hour in gear 4
+        ```
 
     - 防止重写
 
-        你可以通过把方法，属性或下标标记为final来防止它们被重写，只需要在声明关键字前加上final修饰符即可（例如：final var，final func，final class func，以及final subscript）。  
-        如果你重写了final方法，属性或下标，在编译时会报错。在类扩展中的方法，属性或下标也可以在扩展的定义里标记为 final 的。  
-        你可以通过在关键字class前添加final修饰符（final class）来将整个类标记为 final 的。这样的类是不可被继承的，试图继承这样的类会导致编译报错。
+        - 你可以通过把方法，属性或下标标记为final来防止它们被重写，只需要在声明关键字前加上final修饰符即可（例如：final var，final func，final class func，以及final subscript）。  
+        - 如果你重写了final方法，属性或下标，在编译时会报错。在类扩展中的方法，属性或下标也可以在扩展的定义里标记为 final 的。  
+        - 你可以通过在关键字class前添加final修饰符（final class）来将整个类标记为 final 的。这样的类是不可被继承的，试图继承这样的类会导致编译报错。

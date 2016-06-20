@@ -145,6 +145,6 @@ categories:
 
 参考：
 
-    - [different ways to simulate keyword arguments](https://www.reddit.com/r/golang/comments/3gi0pf/different_ways_to_simulate_keyword_arguments)
-    - [self referential functions and design](http://commandcenter.blogspot.nl/2014/01/self-referential-functions-and-design.html)
-    - [functional options for friendly apis] (http://dave.cheney.net/2014/10/17/functional-options-for-friendly-apis)
+- [different ways to simulate keyword arguments](https://www.reddit.com/r/golang/comments/3gi0pf/different_ways_to_simulate_keyword_arguments)
+- [self referential functions and design](http://commandcenter.blogspot.nl/2014/01/self-referential-functions-and-design.html)
+- [functional options for friendly apis](http://dave.cheney.net/2014/10/17/functional-options-for-friendly-apis)

@@ -134,5 +134,5 @@ JSON已经成为最流行的数据交换格式，在python里我们可以用json
 
 参考：
 
-    - `After Json unmarshaling big ints become floats <https://groups.google.com/forum/#!topic/golang-nuts/TDuGDJAIuVM>`_  
-    - `golang json unmarshal int literals as float64 <http://grokbase.com/t/gg/golang-nuts/14cfjj4vf0/go-nuts-json-unmarshal-int-literals-as-float64>`_
+- [After Json unmarshaling big ints become floats](https://groups.google.com/forum/#!topic/golang-nuts/TDuGDJAIuVM)
+- [golang json unmarshal int literals as float64](http://grokbase.com/t/gg/golang-nuts/14cfjj4vf0/go-nuts-json-unmarshal-int-literals-as-float64)
