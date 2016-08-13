@@ -9,8 +9,7 @@ categories:
   - Nginx
 ---
 
-最近我的歌词小站来了很多流量，每天独立ip 120w左右，access log 3000w左右，我的VPS差点没抗住。
-吓得我赶紧改了改系统参数，优化了一下，记录下。
+最近我的歌词小站来了很多流量，我的VPS差点没抗住。吓得我赶紧改了改系统参数，优化了一下，记录下。
 PS. Vultr的VPS CPU性能不错，安利一下[vultr](http://www.vultr.com/?ref=6804560)
 
 # Nginx
