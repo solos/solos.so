@@ -93,6 +93,8 @@ FIN_WAIT1 2475
 ## 修改配置
 
 ```
+sudo vi /etc/sysctl.conf
+
 net.ipv4.tcp_syncookies = 1 # 
 net.core.somaxconn = 8192 #定义了系统中每一个端口最大的监听队列的长度 默认128
 net.ipv4.tcp_tw_reuse = 1 #表示是否允许将处于TIME-WAIT状态的socket用于新的TCP连接
