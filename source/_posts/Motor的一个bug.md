@@ -82,6 +82,7 @@ Motor作者在博客里解释了原因并在0.4.1版本修复了这个bug, 这�
                                       \*\*settings)
         application.listen(8888)
         ioloop.IOLoop.instance().start()
+```
 
 
 #stacktracer.py
@@ -189,9 +190,12 @@ Motor作者在博客里解释了原因并在0.4.1版本修复了这个bug, 这�
         else:
             _trace.stop()
             _trace = None
+```
 
 
 motor 0.4版本测试结果
+
+``` html
 
     <div class="highlight" style="background: #f8f8f8">
     <pre style="line-height: 125%"> <span style="color: #408080; font-style: italic"># ThreadID: 4371427328</span> File: <span style="color: #BA2121">&quot;/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/threading.py&quot;</span>, line <span style="color: #666666">783</span>, <span style="color: #AA22FF; font-weight: bold">in</span> __bootstrap
@@ -215,11 +219,12 @@ motor 0.4版本测试结果
     File: <span style="color: #BA2121">&quot;/Library/Python/2.7/site-packages/pymongo/mongo_replica_set_client.py&quot;</span>, line <span style="color: #666666">1087</span>, <span style="color: #AA22FF; font-weight: bold">in</span> __ensure_monitor
     <span style="color: #008000">self</span><span style="color: #666666">.</span>__monitor_lock<span style="color: #666666">.</span>acquire()
     </pre></div>
+```
 
 
 motor 0.4.1版本测试结果
 
-.. raw:: html
+``` html
 
     <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #408080; font-style: italic"># ThreadID: 4464951296</span>
     File: <span style="color: #BA2121">&quot;/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/threading.py&quot;</span>, line <span style="color: #666666">783</span>, <span style="color: #AA22FF; font-weight: bold">in</span> __bootstrap
@@ -241,3 +246,4 @@ motor 0.4.1版本测试结果
     File: <span style="color: #BA2121">&quot;/Library/Python/2.7/site-packages/tornado/platform/kqueue.py&quot;</span>, line <span style="color: #666666">66</span>, <span style="color: #AA22FF; font-weight: bold">in</span> poll
     kevents <span style="color: #666666">=</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>_kqueue<span style="color: #666666">.</span>control(<span style="color: #008000">None</span>, <span style="color: #666666">1000</span>, timeout)
     </pre></div>
+```
